@@ -16,9 +16,9 @@ Plugin 'gmarik/Vundle.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline' 
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'mileszs/ack.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'tomasr/molokai'
 
 
 "
@@ -38,6 +38,11 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 "
+"
+"
+
+set encoding=utf-8
+
 " NEADTree
 map <C-n> :NERDTreeToggle<CR>
 let NERDChristmasTree=0
@@ -49,11 +54,13 @@ let NERDTreeShowHidden=1
 " airline
 set laststatus=2
 
+set nu
 " color theme
 syntax enable
-set background=dark
-colo solarized
-set nu
+"set background=dark
+colo molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
 
 " Default Indentation
 set autoindent
